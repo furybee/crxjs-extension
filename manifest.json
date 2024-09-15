@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "CRXJS Vue Vite Example",
+  "version": "1.0.0",
+  "action": { "default_popup": "index.html" },
+  "content_scripts": [{
+    "matches": [ "*://*/*" ],
+    "js": [
+      "src/content.ts"
+    ],
+    "type": "module",
+    "run_at": "document_start"
+  }]
+}
